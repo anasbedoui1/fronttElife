@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="container right-container">
+    <h1>Another Container</h1>
+    <!-- Add content here for the new container -->
+  </div>
+  <div class="container left-container">
+    <h1>Users List</h1>
+    <ul>
+      <li *ngFor="let user of users">
+        {{ user.username }} ({{ user.role }})
+        <button (click)="deleteUser(user.id)" class="btn btn-red">Delete</button>
+        <button (click)="updateUser(user)" class="btn btn-red">Update</button>
+      </li>
+    </ul>
+    <form (ngSubmit)="createUser()">
+      <label>Username:</label>
+      <input type="text" [(ngModel)]="newUser.username" required>
+      <br>
+      <label>Role:</label>
+      <input type="text" [(ngModel)]="newUser.role" required>
+      <br>
+      <button type="submit" class="btn btn-red">Create User</button>
+    </form>
+  </div>
+</div>

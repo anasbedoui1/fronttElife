@@ -1,0 +1,28 @@
+<div class="grid-container">
+  <div class="container right-container">
+    <h1>Another Container</h1>
+    <!-- Add content here for the new container -->
+  </div>
+  <div class="container left-container">
+  <h1>Reservations List</h1>
+  <ul>
+    <li *ngFor="let reservation of reservations">
+      {{ reservation.departureDate }} - {{ reservation.returnDate }} ({{ reservation.status }})
+      <button (click)="deleteReservation(reservation.id)" class="btn btn-red">Delete</button>
+      <button (click)="updateReservation(reservation)" class="btn btn-red">Update</button>
+    </li>
+  </ul>
+  <form (ngSubmit)="createReservation()">
+    <label>Departure Date:</label>
+    <input type="date" [(ngModel)]="newReservation.departureDate" required>
+    <br>
+    <label>Return Date:</label>
+    <input type="date" [(ngModel)]="newReservation.returnDate" required>
+    <br>
+    <label>Status:</label>
+    <input type="text" [(ngModel)]="newReservation.status" required>
+    <br>
+    <button type="submit" class="btn btn-red">Create Reservation</button>
+  </form>
+</div>
+</div>

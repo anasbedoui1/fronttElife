@@ -1,0 +1,25 @@
+<div class="grid-container">
+  <div class="container right-container">
+    <h1>Another Container</h1>
+    <!-- Add content here for the new container -->
+  </div>
+  <div class="container left-container">
+  <h1>Louages List</h1>
+  <ul>
+    <li *ngFor="let louage of louages">
+      {{ louage.name }} ({{ louage.description }})
+      <button (click)="deleteLouage(louage.id)" class="btn btn-red">Delete</button>
+      <button (click)="updateLouage(louage)" class="btn btn-red">Update</button>
+    </li>
+  </ul>
+  <form (ngSubmit)="createLouage()">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="newLouage.name" required>
+    <br>
+    <label>Description:</label>
+    <input type="text" [(ngModel)]="newLouage.description" required>
+    <br>
+    <button type="submit" class="btn btn-red">Create Louage</button>
+  </form>
+</div>
+</div>

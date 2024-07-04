@@ -1,0 +1,56 @@
+.grid-container {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 70% 25% ; /* 40% for the left container and 60% for the right container */
+  gap: 25px; /* Space between the two containers */
+}
+
+.container {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 5px;
+  margin-left: 15px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+
+input {
+  width: calc(100% - 110px);
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: darkred;
+}
